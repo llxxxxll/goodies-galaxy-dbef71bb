@@ -1,4 +1,3 @@
-
 export interface Product {
   id: number;
   name: string;
@@ -60,6 +59,30 @@ export const productsData: Product[] = [
       "/lovable-uploads/afbf36bc-38a4-4b89-a348-7a492d0404dc.png",
       "/lovable-uploads/3c01ddce-27ac-42a2-8264-d84afae858a5.png",
       "/lovable-uploads/5cea322b-e301-4852-a879-0ecdf2f020c4.png",
+    ],
+  },
+  {
+    id: 10,
+    name: "Minimal Portable Night Light",
+    price: 19.99,
+    category: "Lighting",
+    image: "/lovable-uploads/fe879b12-50fc-4e6e-bb12-35b7e376e849.png",
+    rating: 4.9,
+    reviews: 112,
+    description: "This portable night light features a simple, spherical design that adds a warm glow to any space. Perfect for kids' bedrooms, nighttime reading, or as an emergency light with its battery-operated functionality.",
+    details: [
+      "Portable mini lamp with round/spherical design (8-12cm diameter)",
+      "USB rechargeable with built-in battery",
+      "Warm, adjustable lighting for comfortable ambiance",
+      "Perfect for bedrooms, kids' rooms, or emergency lighting",
+      "Available in white, black, and wood-tone base options",
+      "Up to 12 hours of battery life on a single charge"
+    ],
+    inStock: true,
+    additionalImages: [
+      "/lovable-uploads/856fdc2a-a2fa-4691-9a4d-2e5a674156f2.png",
+      "/lovable-uploads/aa7b3549-1f62-436d-879c-b3d140149ebc.png",
+      "/lovable-uploads/34b1276c-aae9-4db0-b896-27d2aeb8e56d.png",
     ],
   },
   {
@@ -128,7 +151,7 @@ export const productsData: Product[] = [
 ];
 
 // Featured products subset
-export const featuredProducts: Product[] = [productsData[0], productsData[8], productsData[1], productsData[4]];
+export const featuredProducts: Product[] = [productsData[0], productsData[8], productsData[9], productsData[4]];
 
 // Related products based on category
 export const getRelatedProducts = (productId: number, limit: number = 3): Product[] => {
