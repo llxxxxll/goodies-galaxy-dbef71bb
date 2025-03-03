@@ -94,7 +94,7 @@
 
 @layer utilities {
   .glass-effect {
-    @apply bg-white/80 backdrop-blur-lg border border-white/20 shadow-glass;
+    @apply bg-white/80 backdrop-blur-lg border border-white/20 shadow-md;
   }
   
   .glass-card {

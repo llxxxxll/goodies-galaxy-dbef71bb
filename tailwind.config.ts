@@ -1,3 +1,4 @@
+
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -15,6 +16,7 @@ const config: Config = {
       },
       colors: {
         primary: '#6366f1',
+        border: 'hsl(var(--border))',
       },
       animation: {
         fadeIn: 'fadeIn 0.5s ease-in-out',
