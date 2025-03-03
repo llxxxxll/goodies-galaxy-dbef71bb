@@ -1,49 +1,9 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import ProductCard from "../products/ProductCard";
-
-// Mock data for featured products
-const featuredProducts = [
-  {
-    id: 1,
-    name: "Minimal Desk Lamp",
-    price: 89.99,
-    category: "Lighting",
-    image: "https://images.unsplash.com/photo-1507878566509-a0dbe19677a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2670&q=80",
-    rating: 4.7,
-    reviews: 123,
-  },
-  {
-    id: 2,
-    name: "Ceramic Coffee Mug",
-    price: 24.99,
-    category: "Kitchenware",
-    image: "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2670&q=80",
-    rating: 4.9,
-    reviews: 87,
-  },
-  {
-    id: 3,
-    name: "Wooden Cutting Board",
-    price: 49.99,
-    category: "Kitchenware",
-    image: "https://images.unsplash.com/photo-1594222082000-25f38a9f0ecc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2670&q=80",
-    rating: 4.5,
-    reviews: 64,
-  },
-  {
-    id: 4,
-    name: "Linen Bed Sheets",
-    price: 129.99,
-    category: "Bedding",
-    image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2670&q=80",
-    rating: 4.8,
-    reviews: 156,
-  },
-];
+import { featuredProducts } from "@/data/products";
 
 const FeaturedProducts = () => {
   const [isVisible, setIsVisible] = useState(false);

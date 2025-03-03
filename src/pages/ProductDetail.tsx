@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Navbar from "@/components/layout/Navbar";
@@ -6,64 +5,7 @@ import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Minus, Plus, ShoppingCart, Star, Heart, Share2, ChevronRight, Check } from "lucide-react";
 import ProductCard from "@/components/products/ProductCard";
-
-// Mock product data
-const productsData = [
-  {
-    id: 1,
-    name: "Minimal Desk Lamp",
-    price: 89.99,
-    category: "Lighting",
-    image: "https://images.unsplash.com/photo-1507878566509-a0dbe19677a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2670&q=80",
-    rating: 4.7,
-    reviews: 123,
-    description: "This minimal desk lamp is the perfect addition to your workspace. Its sleek design and adjustable arm provide optimal lighting for any task. Made from high-quality materials, this lamp is built to last.",
-    details: [
-      "Adjustable arm and head for directional lighting",
-      "Energy-efficient LED bulb included",
-      "Touch-sensitive dimmer switch",
-      "Durable metal construction",
-      "Available in matte black, white, and brushed steel",
-    ],
-    inStock: true,
-    additionalImages: [
-      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?ixlib=rb-4.0.3&auto=format&fit=crop&w=2670&q=80",
-      "https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2670&q=80",
-      "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?ixlib=rb-4.0.3&auto=format&fit=crop&w=2670&q=80",
-    ],
-  },
-];
-
-// Related products
-const relatedProducts = [
-  {
-    id: 5,
-    name: "Minimalist Wall Clock",
-    price: 59.99,
-    category: "Home Decor",
-    image: "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2670&q=80",
-    rating: 4.6,
-    reviews: 98,
-  },
-  {
-    id: 6,
-    name: "Woven Basket",
-    price: 34.99,
-    category: "Storage",
-    image: "https://images.unsplash.com/photo-1615926446509-273b06a718bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2670&q=80",
-    rating: 4.3,
-    reviews: 45,
-  },
-  {
-    id: 7,
-    name: "Glass Water Bottle",
-    price: 29.99,
-    category: "Kitchenware",
-    image: "https://images.unsplash.com/photo-1610631787806-b6da23d873f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2670&q=80",
-    rating: 4.7,
-    reviews: 112,
-  },
-];
+import { productsData, getRelatedProducts } from "@/data/products";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -72,6 +14,7 @@ const ProductDetail = () => {
   const [selectedImage, setSelectedImage] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [isWishlisted, setIsWishlisted] = useState(false);
+  const [relatedProducts, setRelatedProducts] = useState([]);
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -82,6 +25,7 @@ const ProductDetail = () => {
       if (foundProduct) {
         setProduct(foundProduct);
         setSelectedImage(foundProduct.image);
+        setRelatedProducts(getRelatedProducts(foundProduct.id));
       }
       setLoading(false);
     }, 500);
