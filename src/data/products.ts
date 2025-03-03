@@ -39,6 +39,30 @@ export const productsData: Product[] = [
     ],
   },
   {
+    id: 9,
+    name: "Minimal Wall Sconce",
+    price: 64.99,
+    category: "Lighting",
+    image: "/lovable-uploads/e0b8f121-2d2c-4213-b4ef-25c031530e39.png",
+    rating: 4.8,
+    reviews: 76,
+    description: "This minimal wall sconce adds a touch of elegance to any space. Its simple design features a sleek panel with built-in LED light source that casts a beautiful ambient glow. Perfect for modern interiors.",
+    details: [
+      "Simple wall lamp with square/circular metal or wood panel",
+      "Built-in LED light source for energy efficiency",
+      "Ideal for bedrooms, hallways, or offices",
+      "Provides both functional lighting and decorative elements",
+      "Available in matte black and brushed metal finishes",
+      "Easy installation with included hardware"
+    ],
+    inStock: true,
+    additionalImages: [
+      "/lovable-uploads/afbf36bc-38a4-4b89-a348-7a492d0404dc.png",
+      "/lovable-uploads/3c01ddce-27ac-42a2-8264-d84afae858a5.png",
+      "/lovable-uploads/5cea322b-e301-4852-a879-0ecdf2f020c4.png",
+    ],
+  },
+  {
     id: 2,
     name: "Ceramic Coffee Mug",
     price: 24.99,
@@ -104,7 +128,7 @@ export const productsData: Product[] = [
 ];
 
 // Featured products subset
-export const featuredProducts: Product[] = productsData.slice(0, 4);
+export const featuredProducts: Product[] = [productsData[0], productsData[8], productsData[1], productsData[4]];
 
 // Related products based on category
 export const getRelatedProducts = (productId: number, limit: number = 3): Product[] => {
