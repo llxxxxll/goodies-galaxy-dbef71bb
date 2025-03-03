@@ -9,15 +9,41 @@ interface ProductImagesProps {
 
 const ProductImages = ({ image, additionalImages = [], name }: ProductImagesProps) => {
   const [selectedImage, setSelectedImage] = useState(image);
+  const [isZoomed, setIsZoomed] = useState(false);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!isZoomed) return;
+    
+    const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - left) / width) * 100;
+    const y = ((e.clientY - top) / height) * 100;
+    
+    setPosition({ x, y });
+  };
 
   return (
     <div>
-      {/* Main Image */}
-      <div className="rounded-lg overflow-hidden bg-gray-100 mb-4 aspect-square">
+      {/* Main Image with Zoom Effect */}
+      <div 
+        className="rounded-lg overflow-hidden bg-gray-100 mb-4 aspect-square relative cursor-zoom-in"
+        onMouseEnter={() => setIsZoomed(true)}
+        onMouseLeave={() => setIsZoomed(false)}
+        onMouseMove={handleMouseMove}
+      >
         <img 
           src={selectedImage} 
           alt={name}
-          className="h-full w-full object-cover object-center"
+          className={`h-full w-full object-cover object-center transition-transform duration-200 ${
+            isZoomed ? 'scale-150' : 'scale-100'
+          }`}
+          style={
+            isZoomed 
+              ? { 
+                  transformOrigin: `${position.x}% ${position.y}%` 
+                }
+              : undefined
+          }
         />
       </div>
       
