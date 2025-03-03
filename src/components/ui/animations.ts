@@ -1,67 +1,92 @@
 
-// Export animation keyframes and utilities without relying on @emotion/react
+import { keyframes } from "@emotion/react";
 
-// Keyframe animation definitions
-export const fadeIn = 'animate-fade-in';
-export const fadeInUp = 'animate-fade-up';
-export const slideInRight = 'animate-slide-in-right';
-export const slideInLeft = 'animate-slide-in-left';
-export const zoomIn = 'animate-scale-in';
-export const pulse = 'animate-pulse';
-export const spin = 'animate-spin';
+// Simple fade in animation
+export const fadeIn = keyframes`
+  from { opacity: 0; }
+  to { opacity: 1; }
+`;
 
-// Animation durations
-export const durations = {
-  fast: 'duration-200',
-  normal: 'duration-300',
-  slow: 'duration-500',
+// Fade in from bottom animation
+export const fadeInUp = keyframes`
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+// Slide in from right animation
+export const slideInRight = keyframes`
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+`;
+
+// Slide in from left animation
+export const slideInLeft = keyframes`
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+`;
+
+// Zoom in animation
+export const zoomIn = keyframes`
+  from { 
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to { 
+    opacity: 1;
+    transform: scale(1);
+  }
+`;
+
+// Pulse animation
+export const pulse = keyframes`
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+`;
+
+// Spin animation
+export const spin = keyframes`
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+`;
+
+// Shimmer animation for loading states
+export const shimmer = keyframes`
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+`;
+
+// Scale animation for hover effects
+export const scaleOnHover = {
+  initial: { scale: 1 },
+  hover: { scale: 1.05, transition: { duration: 0.3 } },
 };
 
-// Animation easings
-export const easings = {
-  default: 'ease-in-out',
-  linear: 'ease-linear',
-  in: 'ease-in',
-  out: 'ease-out',
-};
+// Stagger children animation 
+export const staggerChildren = (delay = 0.1) => ({
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: delay,
+    },
+  },
+});
 
-// Animation delays
-export const delays = {
-  none: 'delay-0',
-  short: 'delay-100',
-  medium: 'delay-200',
-  long: 'delay-300',
-};
-
-// Helper function to combine animation classes
-export const combineAnimations = (...classes: string[]) => classes.join(' ');
-
-// Stagger animation helper (for use with CSS variables)
-export const getStaggerDelay = (index: number, baseDelay = 100) => {
-  return `${index * baseDelay}ms`;
-};
-
-// Common animation combinations
-export const animations = {
-  fadeIn: 'animate-fade-in',
-  fadeUp: 'animate-fade-up',
-  scaleIn: 'animate-scale-in',
-  slideRight: 'animate-slide-in-right',
-  slideLeft: 'animate-slide-in-left',
-  pulse: 'animate-pulse',
-  spin: 'animate-spin',
-};
-
-// Page transition presets
+// Page transition animations
 export const pageTransition = {
-  enter: 'animate-fade-in',
-  exit: 'animate-fade-out',
-};
-
-// Animation utility class names (to use directly in className props)
-export const animationClasses = {
-  hoverScale: 'transition-transform hover:scale-105',
-  hoverBounce: 'transition-transform hover:-translate-y-1',
-  hoverGlow: 'transition-all hover:shadow-lg hover:shadow-primary/25',
-  storyLink: 'relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-primary after:transition-transform hover:after:origin-bottom-left hover:after:scale-x-100',
+  initial: { opacity: 0, y: 10 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -10 },
+  transition: { duration: 0.3 },
 };
