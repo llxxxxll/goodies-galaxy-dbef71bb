@@ -20,7 +20,7 @@ export const productsData: Product[] = [
     name: "Minimal Desk Lamp",
     price: 89.99,
     category: "Lighting",
-    image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "/lovable-uploads/20727f1e-0698-43c6-857f-94dfc5f1c88d.png",
     rating: 4.7,
     reviews: 123,
     description: "This minimal desk lamp is the perfect addition to your workspace. Its sleek design and adjustable arm provide optimal lighting for any task. Made from high-quality materials, this lamp is built to last.",
