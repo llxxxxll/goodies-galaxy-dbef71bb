@@ -86,6 +86,30 @@ export const productsData: Product[] = [
     ],
   },
   {
+    id: 11,
+    name: "Minimal Ceiling Lamp",
+    price: 99.99,
+    category: "Lighting",
+    image: "/lovable-uploads/be300ea0-df2c-4da5-b841-db2e30fec7bc.png",
+    rating: 4.8,
+    reviews: 87,
+    description: "This minimal ceiling lamp features a simple round design that provides elegant main lighting for any room. Its sleek metal frame and diffused light create a warm ambiance perfect for modern interiors.",
+    details: [
+      "Simple round or square ceiling light with clean lines",
+      "Built-in LED light source for energy efficiency",
+      "Perfect for living rooms, dining areas, or offices",
+      "Available in black, brown, or clear with metallic accents",
+      "Dimmable light settings for adjustable ambiance",
+      "Easy installation with included mounting hardware"
+    ],
+    inStock: true,
+    additionalImages: [
+      "/lovable-uploads/21277426-fa5e-4b96-af86-57f2a7d5f7a0.png",
+      "/lovable-uploads/d5a73981-f5a6-4845-8f42-4cc66b8a9e7d.png",
+      "/lovable-uploads/630fde2b-973c-4500-98c2-e9e108ab0359.png",
+    ],
+  },
+  {
     id: 2,
     name: "Ceramic Coffee Mug",
     price: 24.99,
@@ -108,7 +132,7 @@ export const productsData: Product[] = [
     name: "Linen Bed Sheets",
     price: 129.99,
     category: "Bedding",
-    image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1522771739844-66ea5b2be193?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
     rating: 4.8,
     reviews: 156,
   },
@@ -151,7 +175,7 @@ export const productsData: Product[] = [
 ];
 
 // Featured products subset
-export const featuredProducts: Product[] = [productsData[0], productsData[8], productsData[9], productsData[4]];
+export const featuredProducts: Product[] = [productsData[0], productsData[8], productsData[9], productsData[10]];
 
 // Related products based on category
 export const getRelatedProducts = (productId: number, limit: number = 3): Product[] => {
