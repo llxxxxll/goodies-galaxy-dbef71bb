@@ -1,3 +1,4 @@
+
 export interface Product {
   id: number;
   name: string;
@@ -19,7 +20,7 @@ export const productsData: Product[] = [
     name: "Minimal Desk Lamp",
     price: 89.99,
     category: "Lighting",
-    image: "/lovable-uploads/20727f1e-0698-43c6-857f-94dfc5f1c88d.png",
+    image: "/lovable-uploads/e7d67c3f-789b-4031-bd3b-12573c11960a.png",
     rating: 4.7,
     reviews: 123,
     description: "This minimal desk lamp is the perfect addition to your workspace. Its sleek design and adjustable arm provide optimal lighting for any task. Made from high-quality materials, this lamp is built to last.",
