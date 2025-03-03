@@ -35,7 +35,7 @@ export const productsData: Product[] = [
     additionalImages: [
       "/lovable-uploads/7c341ad2-c440-4378-9763-9b264badbf7d.png",
       "/lovable-uploads/b0b0534b-0439-4918-bcb1-fde14d0384b8.png",
-      "https://images.unsplash.com/photo-1530622060432-69b901f4df8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      "/lovable-uploads/868654de-f6dd-4ea3-8258-168fee1b5249.png",
     ],
   },
   {
