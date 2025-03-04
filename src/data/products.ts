@@ -64,11 +64,27 @@ export const productsData: Product[] = [
   {
     id: 3,
     name: "Wooden Cutting Board",
-    price: 49.99,
+    price: 29.99,
     category: "Kitchenware",
-    image: "https://images.unsplash.com/photo-1584834437447-818ea68a2cb2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "/lovable-uploads/31768d5a-2d8c-4047-9c9e-3898319f4067.png",
     rating: 4.5,
     reviews: 64,
+    description: "This simple and modern wooden cutting board features a minimalist design free of decorations or extra details. It's rectangular in shape with smooth edges and a small hole in one corner for easy hanging or transport. The polished surface ensures durability and easy cleaning.",
+    details: [
+      "Made of high-quality natural wood (oak or mahogany)",
+      "Light to dark brown color with visible natural wood grain",
+      "Perfect for everyday chopping of vegetables, meat, or bread",
+      "Can also be used as a serving board for simple dishes",
+      "Durable and environmentally friendly kitchen essential",
+      "Scratch-resistant when used properly",
+      "Easy to clean by simply washing with soap and water"
+    ],
+    inStock: true,
+    additionalImages: [
+      "/lovable-uploads/466dc8fc-479c-4595-83a8-516b12770778.png",
+      "/lovable-uploads/66109cbe-2a8a-4be3-a45c-1042b75df64d.png",
+      "/lovable-uploads/46ea29ec-d56d-44ba-a375-17a08ed12224.png",
+    ],
   },
   {
     id: 4,
