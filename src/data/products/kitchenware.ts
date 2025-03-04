@@ -1,3 +1,4 @@
+
 import { Product } from "../types/product";
 
 export const kitchenwareProducts: Product[] = [
@@ -52,12 +53,31 @@ export const kitchenwareProducts: Product[] = [
   },
   {
     id: 7,
-    name: "Glass Water Bottle",
-    price: 29.99,
+    name: "Minimal Air Fryer",
+    price: 99.99,
     category: "Kitchenware",
-    image: "https://images.unsplash.com/photo-1570913149827-d2ac84ab3f9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    rating: 4.7,
-    reviews: 112,
+    image: "/lovable-uploads/ea0f03fe-a803-470e-bb17-09b73f420bf2.png",
+    rating: 4.8,
+    reviews: 135,
+    description: "A small and simple air fryer with a minimalist design free of unnecessary details. The fryer consists of a rectangular base in polished metallic silver, with a black internal cooking chamber equipped with a pull-out basket and a digital control panel. The multifunctional design allows cooking potatoes, chicken, vegetables, and other foods using hot air without the need for a lot of oil.",
+    details: [
+      "Base and outer body made of high-quality stainless steel with metallic silver finish",
+      "Cooking chamber and basket made of durable matte black BPA-free materials for easy cleaning",
+      "Features digital touch-screen display with temperature and timer controls",
+      "Available in metallic silver/black, matte black, glossy white, and natural beige",
+      "Perfect for cooking fried foods with minimal oil - french fries, chicken, fish, vegetables",
+      "Compact design suitable for small kitchen countertops",
+      "Easy to clean with removable dishwasher-safe parts",
+      "Provides healthy, crispy food with up to 80% less oil than traditional frying",
+      "Powerful 1500W heating element for fast and even cooking",
+      "3.5-liter capacity ideal for 2-4 person servings"
+    ],
+    inStock: true,
+    additionalImages: [
+      "/lovable-uploads/cdf17b2f-b237-4f84-8499-8bae980152f7.png",
+      "/lovable-uploads/632e77a7-830e-469f-842b-90d44e68fa6c.png",
+      "/lovable-uploads/32cdd50a-cc0b-4b1e-8da4-f104a94e6a6d.png",
+    ],
   },
   {
     id: 15,
