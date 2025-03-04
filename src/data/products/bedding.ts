@@ -27,4 +27,29 @@ export const beddingProducts: Product[] = [
       "/lovable-uploads/78a81deb-f19e-4425-95f1-63e71f7193f1.png",
     ],
   },
+  {
+    id: 5,
+    name: "Minimalist Lightweight Blanket",
+    price: 49.99,
+    category: "Bedding",
+    image: "/lovable-uploads/681f87e9-34f9-4a88-abc4-8f160353f888.png",
+    rating: 4.8,
+    reviews: 98,
+    description: "A lightweight and simple blanket featuring a minimalist design with no patterns or embellishments. Perfect for moderate seasons or as a light summer cover.",
+    details: [
+      "Made of high-quality cotton or lightweight cashmere",
+      "Soft and comfortable texture ideal for moderate seasons",
+      "Available in white, natural beige, and other neutral colors",
+      "Rectangular design (150x200cm) with soft edges",
+      "Lightweight and easy to fold or store",
+      "Suitable for sleeping or lounging on bed or sofa",
+      "Easy to wash and tear-resistant"
+    ],
+    inStock: true,
+    additionalImages: [
+      "/lovable-uploads/373a25ab-9455-4352-92b4-7ff3e6563737.png",
+      "/lovable-uploads/076b90d1-f7b2-4cca-a05b-ad59b1a8c02f.png",
+      "/lovable-uploads/45fe4e03-5638-4c86-b3e1-4cef68f603d7.png",
+    ],
+  },
 ];
