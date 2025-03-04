@@ -112,4 +112,32 @@ export const kitchenwareProducts: Product[] = [
       "/lovable-uploads/fffb11a2-5750-4fd9-9eb0-a7aaa1196ae4.png",
     ],
   },
+  {
+    id: 17,
+    name: "Minimal Electric Blender",
+    price: 59.99,
+    category: "Kitchenware",
+    image: "/lovable-uploads/7899f583-b980-4788-9872-e80d6664f143.png",
+    rating: 4.8,
+    reviews: 124,
+    description: "A small and simple electric mixer with a minimalist design free of unnecessary details. The mixer consists of a sturdy rectangular base with a transparent circular container equipped with a side handle and a top cover that has a small opening for adding ingredients. The design has a simple control dial for precise speed adjustments and ease of use.",
+    details: [
+      "Base made of high-quality metal with glossy red finish and black accents",
+      "Container made of durable transparent BPA-free plastic with 1.5-2 liter capacity",
+      "Features powerful stainless steel blades for efficient blending",
+      "Simple control dial with multiple speed settings for precise blending",
+      "Available in glossy red, matte black, glossy white, and light gray",
+      "Perfect for preparing smoothies, juices, soups, and purees",
+      "Powerful motor for handling tough ingredients like frozen fruits",
+      "Compact design suitable for small kitchen spaces",
+      "Easy to clean with removable parts and dishwasher-safe container",
+      "Stylish minimalist design that adds an elegant touch to any kitchen"
+    ],
+    inStock: true,
+    additionalImages: [
+      "/lovable-uploads/a4c2af42-2d3c-420e-ac9d-c3c563424455.png",
+      "/lovable-uploads/fa3d0c0f-90a1-45fe-94dd-bfd2ccc38d14.png",
+      "/lovable-uploads/fb376062-1847-416a-bcfd-c2ca9264840d.png",
+    ],
+  },
 ];
