@@ -21,7 +21,7 @@ const CategoryFilter = ({
             key={category}
             className={`block w-full text-left px-3 py-2 rounded-md text-sm transition-colors ${
               selectedCategory === category
-                ? "bg-blue-50 text-primary font-medium"
+                ? "bg-primary/10 text-primary font-medium"
                 : "text-gray-600 hover:bg-gray-50"
             }`}
             onClick={() => onSelectCategory(category)}

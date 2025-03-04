@@ -187,4 +187,32 @@ export const kitchenwareProducts: Product[] = [
       "/lovable-uploads/a4ebb3ba-ec3f-4ff4-bea7-e5789258bea5.png",
     ],
   },
+  {
+    id: 19,
+    name: "Minimal Glass Storage Containers",
+    price: 34.99,
+    category: "Kitchenware",
+    image: "/lovable-uploads/3c2e7467-e7a4-46e0-b7be-49adde69b68d.png",
+    rating: 4.9,
+    reviews: 112,
+    description: "A set of small and simple glass storage containers featuring a minimalist design free of unnecessary details. Each container is square or rectangular with transparent or wooden lids that can be tightly closed. The multi-functional design allows for the storage of various foods in an organized and convenient way.",
+    details: [
+      "Containers made of high-quality clear glass (BPA-free) for durability and heat resistance",
+      "Lids made of sustainable natural bamboo wood with silicone seal for airtight closure",
+      "Set includes various sizes (300ml, 500ml, 1 liter) for different storage needs",
+      "Transparent glass allows easy visibility of contents",
+      "Stackable design for efficient refrigerator and cabinet organization",
+      "Shatterproof glass designed to be strong and scratch-resistant with smooth sides",
+      "Oven, microwave, freezer, and dishwasher safe (without lids)",
+      "Perfect for storing vegetables, fruits, legumes, leftovers, or meal prep",
+      "Eco-friendly alternative to plastic containers",
+      "Heat resistant up to 400°F (without lids)"
+    ],
+    inStock: true,
+    additionalImages: [
+      "/lovable-uploads/ac1fa6a4-c31d-4e02-8b60-f2cf466de36d.png",
+      "/lovable-uploads/8abcfccb-9876-4698-b7f4-d87cd281901b.png",
+      "/lovable-uploads/97aebebd-01b7-4a0c-9ddf-cdc0ba6ec6d7.png",
+    ],
+  },
 ];
