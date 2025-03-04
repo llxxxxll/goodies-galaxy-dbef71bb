@@ -300,13 +300,6 @@ const Products = () => {
                       </button>
                     </span>
                   )}
-                  
-                  <button 
-                    className="text-xs text-gray-500 underline ml-2"
-                    onClick={handleResetFilters}
-                  >
-                    Clear all
-                  </button>
                 </div>
               )}
               
