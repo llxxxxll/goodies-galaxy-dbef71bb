@@ -85,4 +85,31 @@ export const kitchenwareProducts: Product[] = [
       "/lovable-uploads/35eb06cf-43d5-48d0-82e0-de281a929eea.png",
     ],
   },
+  {
+    id: 16,
+    name: "Minimal Handheld Vegetable Chopper",
+    price: 39.99,
+    category: "Kitchenware",
+    image: "/lovable-uploads/2e0e3d74-72cc-4be4-bae1-7f004337816f.png",
+    rating: 4.7,
+    reviews: 89,
+    description: "A small and simple manual chopper with a minimalist design free of unnecessary details. The device consists of a transparent circular container with a top lid that contains a manual handle and integrated chopping blades. The multi-functional design allows vegetables and fruits to be cut into small cubes or slices easily without the need for electricity.",
+    details: [
+      "Container made of high-quality transparent BPA-free plastic",
+      "Cover and handle made of durable white/grey plastic",
+      "Features removable stainless steel blades for easy cleaning",
+      "Available in white/grey, matte black, and natural beige colors",
+      "Perfect for chopping vegetables, fruits, cheese, and small meats",
+      "Lightweight and suitable for daily use, saves time and effort",
+      "Eco-friendly manual operation with no electricity required",
+      "Compact design for easy storage in any kitchen drawer",
+      "1-2 liter capacity ideal for meal preparation and small batches"
+    ],
+    inStock: true,
+    additionalImages: [
+      "/lovable-uploads/51f60cd9-ae83-4a4f-93dd-3a3ed46976b1.png",
+      "/lovable-uploads/3d29a295-248c-4006-b5d1-0401f2daffdf.png",
+      "/lovable-uploads/fffb11a2-5750-4fd9-9eb0-a7aaa1196ae4.png",
+    ],
+  },
 ];
