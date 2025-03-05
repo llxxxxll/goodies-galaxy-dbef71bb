@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { Minus, Plus, ShoppingCart, Star, Heart, Share2, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Product } from "@/data/products";
+import { useCart } from "@/contexts/CartContext";
+import { toast } from "sonner";
 
 interface ProductInfoProps {
   product: Product;
@@ -12,6 +14,7 @@ interface ProductInfoProps {
 const ProductInfo = ({ product }: ProductInfoProps) => {
   const [quantity, setQuantity] = useState(1);
   const [isWishlisted, setIsWishlisted] = useState(false);
+  const { addItem } = useCart();
   
   const handleIncreaseQuantity = () => {
     setQuantity(prev => prev + 1);
@@ -24,9 +27,7 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
   };
   
   const handleAddToCart = () => {
-    // Add to cart logic would go here
-    console.log(`Added ${quantity} of ${product.name} to cart`);
-    // Here you would typically dispatch to a state manager like Redux
+    addItem(product, quantity);
   };
   
   return (
@@ -116,6 +117,7 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
           className="flex-1"
           size="lg"
           onClick={handleAddToCart}
+          disabled={!product.inStock}
         >
           <ShoppingCart className="h-4 w-4 mr-2" />
           Add to Cart
@@ -138,8 +140,7 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
         onClick={() => {
           // Share functionality
           navigator.clipboard.writeText(window.location.href);
-          // You'd typically show a toast notification here
-          alert("Link copied to clipboard!");
+          toast.success("Link copied to clipboard!");
         }}
       >
         <Share2 className="h-4 w-4 mr-2" />

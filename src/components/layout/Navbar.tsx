@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Search, ShoppingCart, User, Menu, X } from "lucide-react";
+import { Search, User, Menu, X } from "lucide-react";
+import CartIcon from "@/components/cart/CartIcon";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -69,12 +70,7 @@ const Navbar = () => {
             <Button variant="ghost" size="icon" className="rounded-full">
               <User className="h-5 w-5" />
             </Button>
-            <Button variant="ghost" size="icon" className="rounded-full relative">
-              <ShoppingCart className="h-5 w-5" />
-              <span className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center text-xs bg-primary text-white rounded-full">
-                0
-              </span>
-            </Button>
+            <CartIcon />
           </div>
 
           {/* Mobile Menu Button */}
@@ -124,6 +120,13 @@ const Navbar = () => {
             >
               About
             </Link>
+            <Link 
+              to="/cart" 
+              className="text-lg font-medium py-2 border-b border-gray-100"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Cart
+            </Link>
           </div>
 
           {/* Mobile Actions */}
@@ -134,12 +137,7 @@ const Navbar = () => {
             <Button variant="ghost" size="icon" className="rounded-full">
               <User className="h-5 w-5" />
             </Button>
-            <Button variant="ghost" size="icon" className="rounded-full relative">
-              <ShoppingCart className="h-5 w-5" />
-              <span className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center text-xs bg-primary text-white rounded-full">
-                0
-              </span>
-            </Button>
+            <CartIcon />
           </div>
         </div>
       </div>

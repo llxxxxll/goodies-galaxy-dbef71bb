@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Heart, ShoppingCart, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useCart } from "@/contexts/CartContext";
 
 interface Product {
   id: number;
@@ -23,6 +24,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isWishlisted, setIsWishlisted] = useState(false);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const { addItem } = useCart();
   
   return (
     <div 
@@ -83,7 +85,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             className="w-full rounded-full bg-white text-gray-800 hover:bg-white/90"
             onClick={(e) => {
               e.preventDefault();
-              // Add to cart logic
+              addItem(product, 1);
             }}
           >
             <ShoppingCart className="h-4 w-4 mr-2" />
