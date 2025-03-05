@@ -4,28 +4,28 @@ import SearchBar from "./SearchBar";
 interface ProductsHeaderProps {
   searchTerm: string;
   onSearch: (term: string) => void;
+  category?: string;
 }
 
-const ProductsHeader = ({ searchTerm, onSearch }: ProductsHeaderProps) => {
+const ProductsHeader = ({ searchTerm, onSearch, category }: ProductsHeaderProps) => {
   return (
-    <section className="bg-gray-50 pt-32 pb-16">
+    <div className="bg-gray-50 pt-32 pb-12">
       <div className="container mx-auto px-6">
-        <div className="max-w-2xl mx-auto text-center">
-          <span className="inline-block text-primary text-sm mb-3 tracking-widest uppercase">
-            Our Collection
-          </span>
-          <h1 className="text-4xl font-medium mb-6">
-            Discover Our Products
-          </h1>
-          <p className="text-gray-500 mb-8">
-            Browse our carefully curated collection of minimalist products designed to enhance your everyday life.
-          </p>
-          
-          {/* Search */}
-          <SearchBar searchTerm={searchTerm} onSearch={onSearch} />
-        </div>
+        <h1 className="text-4xl font-medium mb-4">
+          {category ? `${category.charAt(0).toUpperCase() + category.slice(1)} Collection` : "All Products"}
+        </h1>
+        <p className="text-gray-600 mb-8 max-w-2xl">
+          {category 
+            ? `Browse our selection of premium ${category.toLowerCase()} products designed for modern living.` 
+            : "Browse our carefully curated collection of home essentials designed for modern living."}
+        </p>
+        <SearchBar 
+          searchTerm={searchTerm} 
+          onSearch={onSearch}
+          placeholder={category ? `Search ${category}...` : "Search products..."}
+        />
       </div>
-    </section>
+    </div>
   );
 };
 
