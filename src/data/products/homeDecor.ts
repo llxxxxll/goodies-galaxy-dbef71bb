@@ -3,7 +3,7 @@ import { Product } from "../types/product";
 
 export const homeDecorProducts: Product[] = [
   {
-    id: 5,
+    id: 201, // Unique ID starting with 201 for home decor
     name: "Minimal Large Wall Clock",
     price: 44.99,
     category: "Home Decor",
@@ -27,7 +27,7 @@ export const homeDecorProducts: Product[] = [
     ]
   },
   {
-    id: 11, // Using a new unique ID to avoid conflicts
+    id: 202, // Unique ID for home decor
     name: "Minimal Photo Frame",
     price: 19.99,
     category: "Home Decor",
@@ -52,7 +52,7 @@ export const homeDecorProducts: Product[] = [
     ]
   },
   {
-    id: 12, // Using a new unique ID to avoid conflicts
+    id: 203, // Unique ID for home decor
     name: "Minimal Large Scented Candle",
     price: 29.99,
     category: "Home Decor",
@@ -77,7 +77,7 @@ export const homeDecorProducts: Product[] = [
     ]
   },
   {
-    id: 13, // Using a new unique ID to avoid conflicts
+    id: 204, // Unique ID for home decor
     name: "Minimal Decorative Shelves",
     price: 34.99,
     category: "Home Decor",
@@ -102,7 +102,7 @@ export const homeDecorProducts: Product[] = [
     ]
   },
   {
-    id: 14, // Using a new unique ID to avoid conflicts
+    id: 205, // Unique ID for home decor
     name: "Minimal Glass Vase",
     price: 24.99,
     category: "Home Decor",

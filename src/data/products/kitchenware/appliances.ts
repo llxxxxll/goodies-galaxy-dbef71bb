@@ -3,7 +3,7 @@ import { Product } from "../../types/product";
 
 export const kitchenwareAppliances: Product[] = [
   {
-    id: 7,
+    id: 541, // Unique ID starting with 541 for kitchenware appliances
     name: "Minimal Air Fryer",
     price: 99.99,
     category: "Kitchenware",
@@ -31,7 +31,7 @@ export const kitchenwareAppliances: Product[] = [
     ],
   },
   {
-    id: 17,
+    id: 542, // Unique ID for kitchenware appliances
     name: "Minimal Electric Blender",
     price: 59.99,
     category: "Kitchenware",
@@ -59,7 +59,7 @@ export const kitchenwareAppliances: Product[] = [
     ],
   },
   {
-    id: 18,
+    id: 543, // Unique ID for kitchenware appliances
     name: "Minimal Electric Fruit Juicer",
     price: 49.99,
     category: "Kitchenware",

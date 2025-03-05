@@ -3,7 +3,7 @@ import { Product } from "../types/product";
 
 export const storageProducts: Product[] = [
   {
-    id: 6,
+    id: 401, // Unique ID starting with 401 for storage
     name: "Woven Basket",
     price: 34.99,
     category: "Storage",

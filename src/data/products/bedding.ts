@@ -3,7 +3,7 @@ import { Product } from "../types/product";
 
 export const beddingProducts: Product[] = [
   {
-    id: 9,  // Changed from 4 to avoid potential conflicts
+    id: 301, // Unique ID starting with 301 for bedding
     name: "Minimalist Sleep Pillow",
     price: 39.99,
     category: "Bedding",
@@ -28,7 +28,7 @@ export const beddingProducts: Product[] = [
     ],
   },
   {
-    id: 10, // Changed from 5 to avoid conflict with the wall clock
+    id: 302, // Unique ID for bedding
     name: "Minimalist Lightweight Blanket",
     price: 49.99,
     category: "Bedding",

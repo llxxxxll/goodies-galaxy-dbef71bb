@@ -3,7 +3,7 @@ import { Product } from "../../types/product";
 
 export const kitchenwareCookingTools: Product[] = [
   {
-    id: 3,
+    id: 501, // Unique ID starting with 501 for kitchenware cooking tools
     name: "Wooden Cutting Board",
     price: 29.99,
     category: "Kitchenware",
@@ -28,7 +28,7 @@ export const kitchenwareCookingTools: Product[] = [
     ],
   },
   {
-    id: 16,
+    id: 502, // Unique ID for kitchenware cooking tools
     name: "Minimal Handheld Vegetable Chopper",
     price: 39.99,
     category: "Kitchenware",

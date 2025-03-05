@@ -3,7 +3,7 @@ import { Product } from "../../types/product";
 
 export const kitchenwareStorage: Product[] = [
   {
-    id: 19,
+    id: 561, // Unique ID starting with 561 for kitchenware storage
     name: "Minimal Glass Storage Containers",
     price: 34.99,
     category: "Kitchenware",
@@ -31,7 +31,7 @@ export const kitchenwareStorage: Product[] = [
     ],
   },
   {
-    id: 20,
+    id: 562, // Unique ID for kitchenware storage
     name: "Minimal Plastic Storage Bins",
     price: 29.99,
     category: "Kitchenware",

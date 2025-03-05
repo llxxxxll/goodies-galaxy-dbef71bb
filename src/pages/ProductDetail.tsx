@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ProductImages from "@/components/products/ProductImages";
@@ -13,6 +13,7 @@ import { productsData, getRelatedProducts, Product } from "@/data/products";
 
 const ProductDetail = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
   const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
@@ -40,6 +41,29 @@ const ProductDetail = () => {
       setLoading(false);
     }, 500);
   }, [id]);
+  
+  // Handle product ID redirection for legacy URLs
+  useEffect(() => {
+    if (!loading && !product) {
+      const legacyId = Number(id);
+      
+      // Map of old IDs to new IDs
+      const idMap: Record<number, number> = {
+        1: 101, // Desk Lamp
+        2: 102, // Wall Sconce
+        3: 103, // Night Light
+        4: 104, // Ceiling Lamp
+        5: 201, // Wall Clock
+        6: 401, // Woven Basket
+        // Add other mappings as needed
+      };
+      
+      if (legacyId in idMap) {
+        // Redirect to the new product ID
+        navigate(`/products/${idMap[legacyId]}`, { replace: true });
+      }
+    }
+  }, [id, loading, product, navigate]);
   
   if (loading) {
     return <ProductLoading />;

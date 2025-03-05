@@ -3,7 +3,7 @@ import { Product } from "../types/product";
 
 export const lightingProducts: Product[] = [
   {
-    id: 1,
+    id: 101, // Unique ID starting with 101 for lighting
     name: "Minimal Desk Lamp",
     price: 29.99,
     category: "Lighting",
@@ -28,7 +28,7 @@ export const lightingProducts: Product[] = [
     ]
   },
   {
-    id: 2,
+    id: 102, // Unique ID for lighting
     name: "Minimal Wall Sconce",
     price: 34.99,
     category: "Lighting",
@@ -53,7 +53,7 @@ export const lightingProducts: Product[] = [
     ]
   },
   {
-    id: 3,
+    id: 103, // Unique ID for lighting
     name: "Minimal Portable Night Light",
     price: 19.99,
     category: "Lighting",
@@ -78,7 +78,7 @@ export const lightingProducts: Product[] = [
     ]
   },
   {
-    id: 4,
+    id: 104, // Unique ID for lighting
     name: "Minimal Ceiling Lamp",
     price: 59.99,
     category: "Lighting",
