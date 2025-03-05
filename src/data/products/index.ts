@@ -29,6 +29,6 @@ export const getRelatedProducts = (productId: number, limit: number = 3): Produc
   if (!product) return [];
   
   return productsData
-    .filter(p => p.category === product.category && p.id !== productId)
+    .filter(p => p.category === product.category && p.id !== Number(productId))
     .slice(0, limit);
 };

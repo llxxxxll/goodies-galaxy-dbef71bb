@@ -21,6 +21,11 @@ const ProductDetail = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     
+    // Reset state when ID changes
+    setLoading(true);
+    setProduct(null);
+    setSelectedImage("");
+    
     // Simulate API call to fetch product
     setTimeout(() => {
       const foundProduct = productsData.find(p => p.id === Number(id));
