@@ -3,7 +3,7 @@ import { Product } from "../../types/product";
 
 export const kitchenwareDrinkware: Product[] = [
   {
-    id: 2,
+    id: 21, // Changed to a unique ID to avoid conflicts with lighting products
     name: "Ceramic Coffee Mug",
     price: 19.99,
     category: "Kitchenware",
@@ -27,7 +27,7 @@ export const kitchenwareDrinkware: Product[] = [
     ],
   },
   {
-    id: 15,
+    id: 22, // Changed to a unique ID to avoid conflicts with lighting products
     name: "Minimal Ceramic Bowl",
     price: 14.99,
     category: "Kitchenware",
