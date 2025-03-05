@@ -1,7 +1,8 @@
 
 import { useState } from "react";
 import { 
-  Armchair, Bath, Image, Flower, Layers, Pencil, Box, TreeDeciduous
+  Armchair, Bath, Image, Flower, Layers, Pencil, Box, TreeDeciduous,
+  Lightbulb, Utensils, Bed, HomeIcon, Package
 } from "lucide-react";
 
 interface CategoryFilterProps {
@@ -15,15 +16,15 @@ const getCategoryIcon = (category: string) => {
     case "all":
       return null;
     case "lighting":
-      return null;
+      return <Lightbulb className="w-4 h-4" />;
     case "kitchenware":
-      return null;
+      return <Utensils className="w-4 h-4" />;
     case "bedding":
-      return null;
+      return <Bed className="w-4 h-4" />;
     case "home decor":
-      return null;
+      return <HomeIcon className="w-4 h-4" />;
     case "storage":
-      return null;
+      return <Package className="w-4 h-4" />;
     case "furniture":
       return <Armchair className="w-4 h-4" />;
     case "bathroom":
