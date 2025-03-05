@@ -17,7 +17,7 @@ export const productsData: Product[] = [
 
 // Featured products subset
 export const featuredProducts: Product[] = [
-  lightingProducts[0], // Minimal Desk Lamp
+  homeDecorProducts[0], // Minimal Large Wall Clock (replacing Minimal Desk Lamp)
   lightingProducts[1], // Minimal Wall Sconce
   lightingProducts[2], // Minimal Portable Night Light
   lightingProducts[3], // Minimal Ceiling Lamp
@@ -25,7 +25,7 @@ export const featuredProducts: Product[] = [
 
 // Related products based on category
 export const getRelatedProducts = (productId: number, limit: number = 3): Product[] => {
-  const product = productsData.find(p => p.id === productId);
+  const product = productsData.find(p => p.id === Number(productId));
   if (!product) return [];
   
   return productsData
