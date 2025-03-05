@@ -1,11 +1,10 @@
-
 import { Product } from "../types/product";
 
 export const lightingProducts: Product[] = [
   {
     id: 101, // Unique ID starting with 101 for lighting
     name: "Minimal Desk Lamp",
-    price: 29.99,
+    price: 89.99,
     category: "Lighting",
     image: "/lovable-uploads/8a8d58e6-0cea-4cc5-82e5-17226624ab87.png",
     rating: 4.7,
