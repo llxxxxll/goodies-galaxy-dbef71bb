@@ -76,4 +76,29 @@ export const homeDecorProducts: Product[] = [
       "/lovable-uploads/923fae85-4468-4607-98db-8ec155d48a3d.png"
     ]
   },
+  {
+    id: 13, // Using a new unique ID to avoid conflicts
+    name: "Minimal Decorative Shelves",
+    price: 34.99,
+    category: "Home Decor",
+    image: "/lovable-uploads/8d7023a1-a6b7-44ba-85b6-ffc121d66a04.png",
+    rating: 4.8,
+    reviews: 56,
+    description: "A small and simple decorative shelf set featuring a minimalist design free of ornaments or extra details. Each shelf is square or rectangular (30x20 cm) with simple supports, suitable for wall mounting or as stand-alone units.",
+    details: [
+      "Made of polished natural wood (oak) or high-quality metal",
+      "Available in natural brown, white, and light gray finishes",
+      "Comes as a set of 2-3 complementary shelves in different sizes",
+      "Easy wall mounting with included hardware",
+      "Can hold up to 5kg of weight per shelf",
+      "Perfect for displaying books, plants, candles, or small decorative items",
+      "Versatile design fits in living rooms, bedrooms, offices, or hallways"
+    ],
+    inStock: true,
+    additionalImages: [
+      "/lovable-uploads/605ff433-a057-4013-b827-7ef2625c900c.png",
+      "/lovable-uploads/540060e3-8b67-4e18-80ad-be6bf49fa368.png",
+      "/lovable-uploads/bdf409e9-bbe2-4926-ac10-2d535471e75b.png"
+    ]
+  },
 ];
