@@ -51,4 +51,29 @@ export const homeDecorProducts: Product[] = [
       "/lovable-uploads/2dc2f3a8-0161-4e59-9eea-e930503decc3.png"
     ]
   },
+  {
+    id: 12, // Using a new unique ID to avoid conflicts
+    name: "Minimal Large Scented Candle",
+    price: 29.99,
+    category: "Home Decor",
+    image: "/lovable-uploads/e3ebd332-039e-46e0-8b73-d3cf693e28a6.png",
+    rating: 4.9,
+    reviews: 78,
+    description: "A large, simple scented candle featuring a minimalist design devoid of frills or extra details. The candle is large (10-12cm diameter, 15cm high), held in a simple glass vessel with a metal or wooden accent, with a single wick for even lighting.",
+    details: [
+      "Silent quartz movement - no ticking for a peaceful environment",
+      "Made of natural wax (beeswax or high-quality paraffin)",
+      "Available in white, light gray, or clear glass vessel options",
+      "Burns for 40-50 hours with proper care",
+      "Features subtle fragrances like rose, lavender, or sandalwood",
+      "Perfect for living rooms, bedrooms, or bathrooms",
+      "Metal rim accent in silver or gold options"
+    ],
+    inStock: true,
+    additionalImages: [
+      "/lovable-uploads/1fe57b4d-a346-4281-bcc2-e6be672cdeab.png",
+      "/lovable-uploads/0aceb8ea-fabf-4887-811a-e3a9cf1ab27a.png",
+      "/lovable-uploads/923fae85-4468-4607-98db-8ec155d48a3d.png"
+    ]
+  },
 ];

@@ -28,11 +28,14 @@ const ProductDetail = () => {
     
     // Simulate API call to fetch product
     setTimeout(() => {
-      const foundProduct = productsData.find(p => p.id === Number(id));
+      // Use Number(id) to ensure proper type comparison
+      const productId = Number(id);
+      const foundProduct = productsData.find(p => p.id === productId);
+      
       if (foundProduct) {
         setProduct(foundProduct);
         setSelectedImage(foundProduct.image); // Set default image
-        setRelatedProducts(getRelatedProducts(foundProduct.id));
+        setRelatedProducts(getRelatedProducts(productId));
       }
       setLoading(false);
     }, 500);
