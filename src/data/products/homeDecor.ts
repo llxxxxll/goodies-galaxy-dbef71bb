@@ -101,4 +101,29 @@ export const homeDecorProducts: Product[] = [
       "/lovable-uploads/bdf409e9-bbe2-4926-ac10-2d535471e75b.png"
     ]
   },
+  {
+    id: 14, // Using a new unique ID to avoid conflicts
+    name: "Minimal Glass Vase",
+    price: 24.99,
+    category: "Home Decor",
+    image: "/lovable-uploads/56141f7a-1d0b-4144-8a8c-dc841e59ff0c.png",
+    rating: 4.9,
+    reviews: 67,
+    description: "A simple and modern vase featuring a minimalist design free of embellishments or extra details. The vase is round or cylindrical (20-30 cm high), with a simple base and smooth edges, suitable for fresh flowers or small plants.",
+    details: [
+      "Made of high-quality clear or neutral-colored glass",
+      "Available in clear, light gray, or white finishes",
+      "Multiple shapes available: cylindrical, rounded, or tapered",
+      "Break-resistant and easy to clean design",
+      "Perfect for displaying fresh flowers or dried arrangements",
+      "Versatile for use in living rooms, dining tables, or offices",
+      "Durable, scratch-resistant material for long-lasting use"
+    ],
+    inStock: true,
+    additionalImages: [
+      "/lovable-uploads/6462354a-7394-48c1-88ca-4d9f218bd55c.png",
+      "/lovable-uploads/d2f4df31-6ff1-4a6e-a5f5-e8c66730db24.png",
+      "/lovable-uploads/cf08b3f6-dd58-41cd-b6be-9717a3c11f7d.png"
+    ]
+  },
 ];
