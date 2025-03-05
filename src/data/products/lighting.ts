@@ -1,4 +1,3 @@
-
 import { Product } from "../types/product";
 
 export const lightingProducts: Product[] = [
@@ -84,24 +83,24 @@ export const lightingProducts: Product[] = [
     name: "Minimal Ceiling Lamp",
     price: 59.99,
     category: "Lighting",
-    image: "/lovable-uploads/5b595711-43d0-4ab0-b0a9-a2daa2b4c632.png",
+    image: "/lovable-uploads/1eab459d-66ee-45b1-9184-121abd368ae4.png",
     rating: 4.5,
     reviews: 78,
-    description: "A contemporary ceiling lamp with a minimalist design free of unnecessary ornamentation. The lamp features a simple, flat shade with clean lines and a slim metal frame that blends seamlessly with any interior.",
+    description: "A contemporary ceiling lamp with a minimalist design free of unnecessary ornamentation. The lamp features a modern geometric shape with clean lines and a matte black frame with warm fabric diffuser that creates beautiful ambient lighting.",
     details: [
-      "Made of powder-coated aluminum with an opal acrylic diffuser",
-      "Available in white, matte black, and brushed metal finishes",
-      "Provides even, glare-free illumination throughout the room",
-      "Integrated energy-efficient LED panel with 3000K warm white light",
+      "Made of high-quality metal with a matte black finish",
+      "Available in flush mount, semi-flush mount, and pendant styles",
+      "Provides warm, even illumination with minimal glare",
+      "Integrated energy-efficient LED light with 3000K warm white illumination",
       "Dimmable capability with compatible dimmer switch",
-      "Slim profile design (only 1.5 inches thick)",
-      "Suitable for living rooms, bedrooms, or offices"
+      "Contemporary design with geometric elements",
+      "Perfect for living rooms, bedrooms, dining areas, or offices"
     ],
     inStock: true,
     additionalImages: [
-      "/lovable-uploads/3cdf2e33-8635-42d6-97e2-39436446d143.png",
-      "/lovable-uploads/3d29a295-248c-4006-b5d1-0401f2daffdf.png",
-      "/lovable-uploads/3c01ddce-27ac-42a2-8264-d84afae858a5.png"
+      "/lovable-uploads/68d43cc0-00e1-46b3-ba0a-eeaac65c22c9.png",
+      "/lovable-uploads/7d3d2e13-5344-45bc-9a8a-e7f1dbfc86eb.png",
+      "/lovable-uploads/e4bfbfdd-e4b3-4434-a015-445c323a4a41.png"
     ]
   }
 ];
