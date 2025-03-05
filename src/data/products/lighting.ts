@@ -7,7 +7,7 @@ export const lightingProducts: Product[] = [
     name: "Minimal Desk Lamp",
     price: 29.99,
     category: "Lighting",
-    image: "/lovable-uploads/21277426-fa5e-4b96-af86-57f2a7d5f7a0.png",
+    image: "/lovable-uploads/8a8d58e6-0cea-4cc5-82e5-17226624ab87.png",
     rating: 4.7,
     reviews: 128,
     description: "A simple and elegant desk lamp featuring a minimalist design without ornaments or extra details. The lamp has a slim design with clean lines, a sleek light metal frame, and a light-colored lampshade.",
@@ -22,9 +22,9 @@ export const lightingProducts: Product[] = [
     ],
     inStock: true,
     additionalImages: [
-      "/lovable-uploads/d5a73981-f5a6-4845-8f42-4cc66b8a9e7d.png",
-      "/lovable-uploads/35eb06cf-43d5-48d0-82e0-de281a929eea.png",
-      "/lovable-uploads/856fdc2a-a2fa-4691-9a4d-2e5a674156f2.png"
+      "/lovable-uploads/fd205277-db1a-4be3-9e9a-6d8dae63e2eb.png",
+      "/lovable-uploads/bbd488a3-0b8c-4ffd-ac4f-3e8e4619e3f2.png",
+      "/lovable-uploads/819a7e8c-d9c1-433f-bc4f-db54c0320421.png"
     ]
   },
   {
