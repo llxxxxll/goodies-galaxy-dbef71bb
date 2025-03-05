@@ -1,3 +1,4 @@
+
 import { Product } from "../types/product";
 
 export const lightingProducts: Product[] = [
@@ -29,26 +30,27 @@ export const lightingProducts: Product[] = [
   {
     id: 102, // Unique ID for lighting
     name: "Minimal Wall Sconce",
-    price: 34.99,
+    price: 64.99,
     category: "Lighting",
-    image: "/lovable-uploads/5cea322b-e301-4852-a879-0ecdf2f020c4.png",
+    image: "/lovable-uploads/935b1b29-d219-48e9-ad4b-a68cb467f7f7.png",
     rating: 4.6,
     reviews: 95,
-    description: "A clean and minimal wall sconce featuring a simple design without unnecessary decorations or patterns. The sconce has a slim profile that sits close to the wall, with a minimalist construction of light metal and a simple, translucent shade.",
+    description: "A clean and minimal wall sconce featuring a simple design without unnecessary decorations or patterns. The sconce has a sleek rectangular profile with an elegant matte black finish that creates dramatic up and down lighting effects on your wall.",
     details: [
-      "Made of brushed stainless steel and frosted glass",
-      "Available in brushed nickel, matte black, and white finishes",
-      "Provides soft, ambient lighting perfect for hallways and bedrooms",
+      "Made of high-quality aluminum with a matte black finish",
+      "Creates beautiful up and down lighting patterns on your wall",
+      "Provides warm, ambient lighting perfect for hallways and living spaces",
       "Easy installation with included mounting hardware",
-      "Compatible with LED, incandescent, or CFL bulbs (E26 base)",
+      "Compatible with LED or incandescent bulbs (G9 base)",
       "Dimmable when used with compatible dimmer switch",
-      "UL listed for safety compliance"
+      "UL listed for safety compliance",
+      "Sleek rectangular design with minimalist aesthetic"
     ],
     inStock: true,
     additionalImages: [
-      "/lovable-uploads/587c2e89-43e1-4372-89d7-c432f781a3d1.png",
-      "/lovable-uploads/fe270563-e7a4-46de-add9-6d91e3a7c0a0.png",
-      "/lovable-uploads/be300ea0-df2c-4da5-b841-db2e30fec7bc.png"
+      "/lovable-uploads/0815e58b-fb3b-4cad-ac1a-42dcad1d758e.png",
+      "/lovable-uploads/d3fcda7c-f0a1-4e2e-83b7-cdf8b2ea802e.png",
+      "/lovable-uploads/cc1b5a10-5d6f-4cbf-923d-7911474e7e6f.png"
     ]
   },
   {
