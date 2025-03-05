@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -103,6 +102,10 @@
   
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .color-transition {
+    transition: background-color 3s ease-in-out;
   }
 }
 
