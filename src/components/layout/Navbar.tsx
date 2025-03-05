@@ -3,8 +3,32 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Search, User, Menu, X } from "lucide-react";
+import { Search, User, Menu, X, ChevronDown } from "lucide-react";
 import CartIcon from "@/components/cart/CartIcon";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+// Categories for the dropdown
+const categoryItems = [
+  { name: "All Products", path: "/products" },
+  { name: "Lighting", path: "/categories/lighting" },
+  { name: "Kitchenware", path: "/categories/kitchenware" },
+  { name: "Bedding", path: "/categories/bedding" },
+  { name: "Home Decor", path: "/categories/home decor" },
+  { name: "Storage", path: "/categories/storage" },
+  { name: "Furniture", path: "/categories/furniture" },
+  { name: "Bathroom", path: "/categories/bathroom" },
+  { name: "Wall Art", path: "/categories/wall art" },
+  { name: "Plants & Planters", path: "/categories/plants & planters" },
+  { name: "Textiles", path: "/categories/textiles" },
+  { name: "Stationery", path: "/categories/stationery" },
+  { name: "Organization", path: "/categories/organization" },
+  { name: "Outdoor", path: "/categories/outdoor" },
+];
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -54,9 +78,29 @@ const Navbar = () => {
             <Link to="/products" className="text-sm font-medium hover:text-primary transition-colors">
               Shop
             </Link>
-            <Link to="/categories" className="text-sm font-medium hover:text-primary transition-colors">
-              Categories
-            </Link>
+            
+            {/* Categories Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1">
+                  Categories
+                  <ChevronDown className="h-4 w-4" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="w-56">
+                {categoryItems.map((category) => (
+                  <DropdownMenuItem key={category.name} asChild>
+                    <Link 
+                      to={category.path}
+                      className="w-full"
+                    >
+                      {category.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+            
             <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">
               About
             </Link>
@@ -106,13 +150,24 @@ const Navbar = () => {
             >
               Shop
             </Link>
-            <Link 
-              to="/categories" 
-              className="text-lg font-medium py-2 border-b border-gray-100"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Categories
-            </Link>
+            
+            {/* Mobile Categories */}
+            <div className="py-2 border-b border-gray-100">
+              <p className="text-lg font-medium mb-2">Categories</p>
+              <div className="ml-4 space-y-2 max-h-60 overflow-y-auto">
+                {categoryItems.map((category) => (
+                  <Link
+                    key={category.name}
+                    to={category.path}
+                    className="block text-base text-gray-600 hover:text-primary py-1"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {category.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            
             <Link 
               to="/about" 
               className="text-lg font-medium py-2 border-b border-gray-100"

@@ -16,6 +16,14 @@ const categories = [
   "Bedding",
   "Home Decor",
   "Storage",
+  "Furniture",
+  "Bathroom",
+  "Wall Art",
+  "Plants & Planters",
+  "Textiles",
+  "Stationery",
+  "Organization",
+  "Outdoor",
 ];
 
 // Price ranges
