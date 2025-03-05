@@ -27,12 +27,28 @@ export const homeDecorProducts: Product[] = [
     ]
   },
   {
-    id: 8,
-    name: "Concrete Planter",
-    price: 39.99,
+    id: 11, // Using a new unique ID to avoid conflicts
+    name: "Minimal Photo Frame",
+    price: 19.99,
     category: "Home Decor",
-    image: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    rating: 4.5,
-    reviews: 67,
+    image: "/lovable-uploads/e30032c1-2034-4efe-987b-7ddc5340f9c6.png",
+    rating: 4.7,
+    reviews: 89,
+    description: "A simple and modern photo frame featuring a minimalist design without any extra decorations or details. The frame is available in square or rectangular sizes, with simple clear glass and light frames, suitable for displaying photos or small art.",
+    details: [
+      "Made of high-quality aluminum or natural wood with premium finish",
+      "Available in white, matte black, and natural brown finishes",
+      "Comes in multiple sizes: 15×20cm or 20×25cm",
+      "Includes transparent glass front and sturdy back panel",
+      "Can be displayed on walls, shelves, or desks",
+      "Simple and elegant design that fits any minimalist decor",
+      "Durable, scratch-resistant finish for long-lasting use"
+    ],
+    inStock: true,
+    additionalImages: [
+      "/lovable-uploads/83ed884e-53ec-41f9-8cc0-4fe79a82294e.png",
+      "/lovable-uploads/a5e0f349-aa86-4f4b-b78a-68f8863c653d.png",
+      "/lovable-uploads/2dc2f3a8-0161-4e59-9eea-e930503decc3.png"
+    ]
   },
 ];

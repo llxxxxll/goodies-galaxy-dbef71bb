@@ -17,7 +17,7 @@ export const productsData: Product[] = [
 
 // Featured products subset
 export const featuredProducts: Product[] = [
-  homeDecorProducts[0], // Minimal Large Wall Clock (replacing Minimal Desk Lamp)
+  homeDecorProducts[0], // Minimal Large Wall Clock
   lightingProducts[1], // Minimal Wall Sconce
   lightingProducts[2], // Minimal Portable Night Light
   lightingProducts[3], // Minimal Ceiling Lamp
