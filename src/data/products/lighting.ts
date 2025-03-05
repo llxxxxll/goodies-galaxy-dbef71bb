@@ -58,24 +58,25 @@ export const lightingProducts: Product[] = [
     name: "Minimal Portable Night Light",
     price: 19.99,
     category: "Lighting",
-    image: "/lovable-uploads/cdf17b2f-b237-4f84-8499-8bae980152f7.png",
+    image: "/lovable-uploads/e75ee151-85db-4f69-95bf-0bf866e4ba2c.png",
     rating: 4.8,
     reviews: 156,
-    description: "A small and portable night light with a minimalist design free from unnecessary details. This cordless light features a clean, simple form factor with a light-colored body, making it perfect for bedrooms, nurseries, or hallways.",
+    description: "A small and portable night light with a minimalist spherical design. This cordless light features a clean, simple form with a matte black base and warm, glowing illumination, making it perfect for bedrooms, nurseries, or hallways.",
     details: [
       "Made of high-quality ABS material with a matte finish",
-      "Available in white, warm gray, and light beige colors",
+      "Available in white, warm yellow, and matte black colors",
       "Rechargeable battery with up to 20 hours of run time",
       "Touch-sensitive control with 3 brightness levels",
       "Built-in motion sensor option for automatic activation",
       "Warm, eye-friendly LED light (2700K-3000K)",
-      "Cordless design allows for placement anywhere in the home"
+      "Cordless design allows for placement anywhere in the home",
+      "Spherical design creates a soft, ambient glow"
     ],
     inStock: true,
     additionalImages: [
-      "/lovable-uploads/70b8adbd-dc4f-4ca0-9c3e-ebe2b36746fa.png",
-      "/lovable-uploads/ac1fa6a4-c31d-4e02-8b60-f2cf466de36d.png",
-      "/lovable-uploads/db30cea3-0033-4895-8242-a98a9770d50e.png"
+      "/lovable-uploads/aefe8c60-a2ac-4a0a-8c34-10a532d3162b.png",
+      "/lovable-uploads/cb0c19cb-b0c1-4a89-96ed-2c620d8b4084.png",
+      "/lovable-uploads/90cb65ea-3e34-45be-89df-7ead298dbb67.png"
     ]
   },
   {
