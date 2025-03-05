@@ -1,16 +1,38 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface ProductImagesProps {
   image: string;
   additionalImages?: string[];
   name: string;
+  selectedImage?: string;
+  onImageSelect?: (image: string) => void;
 }
 
-const ProductImages = ({ image, additionalImages = [], name }: ProductImagesProps) => {
+const ProductImages = ({ 
+  image, 
+  additionalImages = [], 
+  name,
+  selectedImage: externalSelectedImage,
+  onImageSelect 
+}: ProductImagesProps) => {
   const [selectedImage, setSelectedImage] = useState(image);
   const [isZoomed, setIsZoomed] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  // Sync with external state if provided
+  useEffect(() => {
+    if (externalSelectedImage) {
+      setSelectedImage(externalSelectedImage);
+    }
+  }, [externalSelectedImage]);
+
+  const handleImageSelect = (imgSrc: string) => {
+    setSelectedImage(imgSrc);
+    if (onImageSelect) {
+      onImageSelect(imgSrc);
+    }
+  };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!isZoomed) return;
@@ -51,7 +73,7 @@ const ProductImages = ({ image, additionalImages = [], name }: ProductImagesProp
       <div className="grid grid-cols-4 gap-4">
         <button 
           className={`rounded-md overflow-hidden aspect-square ${selectedImage === image ? 'ring-2 ring-primary' : 'ring-1 ring-gray-200'}`}
-          onClick={() => setSelectedImage(image)}
+          onClick={() => handleImageSelect(image)}
         >
           <img 
             src={image} 
@@ -64,7 +86,7 @@ const ProductImages = ({ image, additionalImages = [], name }: ProductImagesProp
           <button 
             key={index}
             className={`rounded-md overflow-hidden aspect-square ${selectedImage === imgSrc ? 'ring-2 ring-primary' : 'ring-1 ring-gray-200'}`}
-            onClick={() => setSelectedImage(imgSrc)}
+            onClick={() => handleImageSelect(imgSrc)}
           >
             <img 
               src={imgSrc} 

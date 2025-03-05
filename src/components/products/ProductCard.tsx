@@ -85,7 +85,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             className="w-full rounded-full bg-white text-gray-800 hover:bg-white/90"
             onClick={(e) => {
               e.preventDefault();
-              addItem(product, 1);
+              addItem(product, 1, product.image);
             }}
           >
             <ShoppingCart className="h-4 w-4 mr-2" />

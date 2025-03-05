@@ -16,6 +16,7 @@ const ProductDetail = () => {
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
   const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
+  const [selectedImage, setSelectedImage] = useState<string>("");
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -25,6 +26,7 @@ const ProductDetail = () => {
       const foundProduct = productsData.find(p => p.id === Number(id));
       if (foundProduct) {
         setProduct(foundProduct);
+        setSelectedImage(foundProduct.image); // Set default image
         setRelatedProducts(getRelatedProducts(foundProduct.id));
       }
       setLoading(false);
@@ -53,11 +55,13 @@ const ProductDetail = () => {
             <ProductImages 
               image={product.image} 
               additionalImages={product.additionalImages} 
-              name={product.name} 
+              name={product.name}
+              onImageSelect={(image) => setSelectedImage(image)}
+              selectedImage={selectedImage}
             />
             
             {/* Product Info */}
-            <ProductInfo product={product} />
+            <ProductInfo product={product} selectedImage={selectedImage} />
           </div>
         </div>
       </section>

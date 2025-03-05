@@ -5,9 +5,11 @@ import { Product } from "@/data/types/product";
 
 // Define cart item type
 export interface CartItem {
-  id: number;
+  id: string; // Changed to string to accommodate product-image combination
+  productId: number;
   product: Product;
   quantity: number;
+  selectedImage: string;
 }
 
 // Define cart state
@@ -19,17 +21,17 @@ interface CartState {
 
 // Define cart actions
 type CartAction = 
-  | { type: 'ADD_ITEM'; payload: { product: Product; quantity: number } }
-  | { type: 'REMOVE_ITEM'; payload: { id: number } }
-  | { type: 'UPDATE_QUANTITY'; payload: { id: number; quantity: number } }
+  | { type: 'ADD_ITEM'; payload: { product: Product; quantity: number; selectedImage: string } }
+  | { type: 'REMOVE_ITEM'; payload: { id: string } }
+  | { type: 'UPDATE_QUANTITY'; payload: { id: string; quantity: number } }
   | { type: 'CLEAR_CART' };
 
 // Define cart context type
 interface CartContextType {
   cart: CartState;
-  addItem: (product: Product, quantity: number) => void;
-  removeItem: (id: number) => void;
-  updateQuantity: (id: number, quantity: number) => void;
+  addItem: (product: Product, quantity: number, selectedImage: string) => void;
+  removeItem: (id: string) => void;
+  updateQuantity: (id: string, quantity: number) => void;
   clearCart: () => void;
 }
 
@@ -51,25 +53,40 @@ const calculateCartTotals = (items: CartItem[]): { totalItems: number; totalPric
   return { totalItems, totalPrice };
 };
 
+// Generate unique cart item ID
+const generateCartItemId = (productId: number, selectedImage: string): string => {
+  return `${productId}-${selectedImage}`;
+};
+
 // Cart reducer
 const cartReducer = (state: CartState, action: CartAction): CartState => {
   switch (action.type) {
     case 'ADD_ITEM': {
-      const { product, quantity } = action.payload;
-      const existingItem = state.items.find(item => item.id === product.id);
+      const { product, quantity, selectedImage } = action.payload;
+      const cartItemId = generateCartItemId(product.id, selectedImage);
+      const existingItem = state.items.find(item => item.id === cartItemId);
       
       let updatedItems: CartItem[];
       
       if (existingItem) {
         // Update quantity if item already exists
         updatedItems = state.items.map(item => 
-          item.id === product.id 
+          item.id === cartItemId 
             ? { ...item, quantity: item.quantity + quantity } 
             : item
         );
       } else {
         // Add new item
-        updatedItems = [...state.items, { id: product.id, product, quantity }];
+        updatedItems = [
+          ...state.items, 
+          { 
+            id: cartItemId, 
+            productId: product.id,
+            product, 
+            quantity,
+            selectedImage 
+          }
+        ];
       }
       
       const { totalItems, totalPrice } = calculateCartTotals(updatedItems);
@@ -133,7 +150,11 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         parsedCart.items.forEach(item => {
           dispatch({
             type: 'ADD_ITEM',
-            payload: { product: item.product, quantity: item.quantity }
+            payload: { 
+              product: item.product, 
+              quantity: item.quantity, 
+              selectedImage: item.selectedImage 
+            }
           });
         });
       } catch (error) {
@@ -149,17 +170,20 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   }, [cart]);
   
   // Expose cart actions
-  const addItem = (product: Product, quantity: number) => {
-    dispatch({ type: 'ADD_ITEM', payload: { product, quantity } });
+  const addItem = (product: Product, quantity: number, selectedImage: string) => {
+    dispatch({ 
+      type: 'ADD_ITEM', 
+      payload: { product, quantity, selectedImage } 
+    });
     toast.success(`${product.name} added to cart`);
   };
   
-  const removeItem = (id: number) => {
+  const removeItem = (id: string) => {
     dispatch({ type: 'REMOVE_ITEM', payload: { id } });
     toast.info("Item removed from cart");
   };
   
-  const updateQuantity = (id: number, quantity: number) => {
+  const updateQuantity = (id: string, quantity: number) => {
     dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } });
   };
   

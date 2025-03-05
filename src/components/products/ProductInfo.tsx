@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Minus, Plus, ShoppingCart, Star, Heart, Share2, Check } from "lucide-react";
@@ -9,9 +8,10 @@ import { toast } from "sonner";
 
 interface ProductInfoProps {
   product: Product;
+  selectedImage?: string;
 }
 
-const ProductInfo = ({ product }: ProductInfoProps) => {
+const ProductInfo = ({ product, selectedImage }: ProductInfoProps) => {
   const [quantity, setQuantity] = useState(1);
   const [isWishlisted, setIsWishlisted] = useState(false);
   const { addItem } = useCart();
@@ -27,7 +27,8 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
   };
   
   const handleAddToCart = () => {
-    addItem(product, quantity);
+    const imageToUse = selectedImage || product.image;
+    addItem(product, quantity, imageToUse);
   };
   
   return (

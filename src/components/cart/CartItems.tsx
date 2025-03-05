@@ -15,11 +15,11 @@ const CartItems = () => {
         <div className="divide-y divide-gray-100">
           {cart.items.map((item) => (
             <div key={item.id} className="py-4 flex flex-col sm:flex-row items-center gap-4">
-              {/* Product Image */}
+              {/* Product Image - Now showing the selected image */}
               <div className="w-24 h-24 rounded-md overflow-hidden flex-shrink-0">
-                <Link to={`/products/${item.id}`}>
+                <Link to={`/products/${item.productId}`}>
                   <img 
-                    src={item.product.image} 
+                    src={item.selectedImage} 
                     alt={item.product.name}
                     className="w-full h-full object-cover"
                   />
@@ -28,7 +28,7 @@ const CartItems = () => {
               
               {/* Product Info */}
               <div className="flex-grow">
-                <Link to={`/products/${item.id}`}>
+                <Link to={`/products/${item.productId}`}>
                   <h3 className="font-medium text-lg hover:text-primary transition-colors">
                     {item.product.name}
                   </h3>
