@@ -1,3 +1,4 @@
+
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -81,6 +82,16 @@ const config: Config = {
         shimmer: {
           '0%': { backgroundPosition: '-200% 0' },
           '100%': { backgroundPosition: '200% 0' },
+        },
+        slideInUp: {
+          '0%': { 
+            opacity: '0', 
+            transform: 'translateY(30px)'
+          },
+          '100%': { 
+            opacity: '1', 
+            transform: 'translateY(0)'
+          }
         },
       },
       borderRadius: {

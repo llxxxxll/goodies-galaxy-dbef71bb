@@ -34,16 +34,18 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-3xl">
-          <span className="inline-block text-white/80 text-sm mb-3 tracking-widest uppercase animate-fade-in">
+          <span className="inline-block text-white/80 text-sm mb-3 tracking-widest uppercase opacity-0 animate-[fadeIn_0.6s_ease-out_0.2s_forwards]">
             Discover Timeless Elegance
           </span>
-          <h1 className="text-4xl md:text-6xl font-medium text-white mb-6 leading-tight animate-fade-up" style={{ animationDelay: "200ms" }}>
+          <h1 className="text-4xl md:text-6xl font-medium text-white mb-6 leading-tight opacity-0 animate-[fadeIn_0.8s_ease-out_0.4s_forwards]">
             Simplicity is the Ultimate Sophistication
           </h1>
-          <p className="text-white/80 text-lg mb-8 max-w-xl animate-fade-up" style={{ animationDelay: "400ms" }}>
-            Curated collection of minimalist products designed to bring harmony and function to your everyday life.
+          <p className="text-white/80 text-lg mb-8 max-w-xl opacity-0 animate-[slideInUp_1s_ease-out_0.6s_forwards] relative">
+            <span className="block overflow-hidden">
+              Curated collection of minimalist products designed to bring harmony and function to your everyday life.
+            </span>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "600ms" }}>
+          <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-[fadeIn_1s_ease-out_0.8s_forwards]">
             <Button asChild size="lg" className="rounded-full">
               <Link to="/products">
                 Explore Collection
@@ -60,7 +62,7 @@ const Hero = () => {
       </div>
       
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center opacity-0 animate-[fadeIn_1s_ease-out_1.2s_forwards]">
         <span className="text-white/60 text-xs mb-2">Scroll</span>
         <div className="h-12 w-0.5 bg-white/20 relative overflow-hidden">
           <div className="h-6 w-full bg-white absolute top-0 animate-bounce"></div>
