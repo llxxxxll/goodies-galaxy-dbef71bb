@@ -5,6 +5,7 @@ import { kitchenwareProducts } from "./kitchenware";
 import { beddingProducts } from "./bedding";
 import { homeDecorProducts } from "./homeDecor";
 import { storageProducts } from "./storage";
+import { furnitureProducts } from "./furniture";
 
 // Combine all products
 export const productsData: Product[] = [
@@ -13,6 +14,7 @@ export const productsData: Product[] = [
   ...beddingProducts,
   ...homeDecorProducts,
   ...storageProducts,
+  ...furnitureProducts,
 ];
 
 // Featured products subset
@@ -20,7 +22,7 @@ export const featuredProducts: Product[] = [
   homeDecorProducts[0], // Minimal Large Wall Clock
   lightingProducts[0], // Minimal Desk Lamp
   lightingProducts[2], // Minimal Portable Night Light
-  lightingProducts[3], // Minimal Ceiling Lamp
+  furnitureProducts[0], // Minimal Coffee Table - Adding this to featured products
 ];
 
 // Related products based on category
