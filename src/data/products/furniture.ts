@@ -26,6 +26,5 @@ export const furnitureProducts: Product[] = [
       "/lovable-uploads/f1c5192d-fa66-4d25-8b53-a5c81adbdab6.png",
       "/lovable-uploads/5c798766-594e-4a4e-866b-72457c1da074.png"
     ]
-  },
-  // We can add more furniture products in the future
+  }
 ];
