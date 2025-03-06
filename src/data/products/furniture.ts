@@ -1,9 +1,8 @@
-
 import { Product } from "../types/product";
 
 export const furnitureProducts: Product[] = [
   {
-    id: 601, // Using unique ID range starting with 6xx for furniture
+    id: 601,
     name: "Minimal Coffee Table",
     price: 129.99,
     category: "Furniture",
@@ -105,6 +104,34 @@ export const furnitureProducts: Product[] = [
       "/lovable-uploads/55711f68-7ec2-4d73-8941-3100d4f2add6.png",
       "/lovable-uploads/5d037737-a5e1-4b82-9a49-084f1b980afb.png",
       "/lovable-uploads/242d319d-f4dc-4a91-a9db-598e6b9f8e5a.png"
+    ]
+  },
+  {
+    id: 605,
+    name: "Minimal Bedside Table",
+    price: 89.99,
+    category: "Furniture",
+    image: "/lovable-uploads/546b3009-57c3-457e-9941-45c812dc79b7.png",
+    rating: 4.9,
+    reviews: 24,
+    description: "Perfect for your bedroom, our Minimal Bedside Table combines sleek design with functionality. This compact table is ideal for keeping essential items within reach while adding a touch of modern elegance to your space.",
+    details: [
+      "Dimensions: 40cm width x 40cm depth x 50cm height",
+      "Available in circular or square designs with clean, modern lines",
+      "Made from premium natural oak wood or metal frame options",
+      "Comes in white, matte black, or light gray finishes",
+      "Scratch and moisture-resistant surfaces",
+      "Lightweight design (weighs only 3 kg) for easy movement",
+      "Sturdy construction that can hold up to 15kg",
+      "Simple assembly required with all hardware included",
+      "Perfect for bedrooms as a nightstand or side table",
+      "Ideal for displaying lamps, books, alarm clocks, or small decorative items"
+    ],
+    inStock: true,
+    additionalImages: [
+      "/lovable-uploads/3e51e9ec-9502-4922-8074-91ed80e2a276.png",
+      "/lovable-uploads/b6afd47a-ae4f-42fd-9d4f-793472aea968.png",
+      "/lovable-uploads/66831848-72cb-4fa9-8828-1f69340fab1d.png"
     ]
   }
 ];

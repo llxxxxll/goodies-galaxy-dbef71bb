@@ -33,7 +33,8 @@ export const featuredProducts: Product[] = [
   furnitureProducts[0], // Minimal Coffee Table
   furnitureProducts[1], // Minimal Side Table
   furnitureProducts[2], // Minimal Dining Chair
-  furnitureProducts[3], // Minimal Bookshelf - Adding to featured products
+  furnitureProducts[3], // Minimal Bookshelf 
+  furnitureProducts[4], // Minimal Bedside Table - Adding to featured products
 ];
 
 // Related products based on category
