@@ -30,7 +30,8 @@ export const featuredProducts: Product[] = [
   homeDecorProducts[0], // Minimal Large Wall Clock
   lightingProducts[0], // Minimal Desk Lamp
   lightingProducts[2], // Minimal Portable Night Light
-  furnitureProducts[0], // Minimal Coffee Table - Including in featured products
+  furnitureProducts[0], // Minimal Coffee Table
+  furnitureProducts[1], // Minimal Side Table - Adding to featured products
 ];
 
 // Related products based on category
