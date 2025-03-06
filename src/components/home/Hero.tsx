@@ -37,8 +37,16 @@ const Hero = () => {
           <span className="inline-block text-white/80 text-sm mb-3 tracking-widest uppercase opacity-0 animate-[fadeIn_0.6s_ease-out_0.2s_forwards]">
             Discover Timeless Elegance
           </span>
-          <h1 className="text-4xl md:text-6xl font-medium text-white mb-6 leading-tight opacity-0 animate-[fadeIn_0.8s_ease-out_0.4s_forwards]">
-            Simplicity is the Ultimate Sophistication
+          <h1 className="text-4xl md:text-6xl font-medium text-white mb-6 leading-tight">
+            <span className="block overflow-hidden">
+              <span className="inline-block opacity-0 animate-[slideInUp_0.8s_ease-out_0.4s_forwards]">Simplicity</span>
+            </span>
+            <span className="block overflow-hidden">
+              <span className="inline-block opacity-0 animate-[slideInUp_0.8s_ease-out_0.6s_forwards]">is the Ultimate</span>
+            </span>
+            <span className="block overflow-hidden">
+              <span className="inline-block opacity-0 animate-[slideInUp_0.8s_ease-out_0.8s_forwards]">Sophistication</span>
+            </span>
           </h1>
           <p className="text-white/80 text-lg mb-8 max-w-xl opacity-0 animate-[slideInUp_1s_ease-out_0.6s_forwards] relative">
             <span className="block overflow-hidden">
