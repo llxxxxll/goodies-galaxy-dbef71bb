@@ -19,6 +19,7 @@ const ProductImages = ({
   const [selectedImage, setSelectedImage] = useState(image);
   const [isZoomed, setIsZoomed] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isLoading, setIsLoading] = useState(true);
 
   // Sync with external state if provided
   useEffect(() => {
@@ -44,10 +45,15 @@ const ProductImages = ({
     setPosition({ x, y });
   };
 
-  // Add error handling for images
+  // Handle image loading and errors
+  const handleImageLoad = () => {
+    setIsLoading(false);
+  };
+
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
     console.error("Image failed to load:", e.currentTarget.src);
     e.currentTarget.src = "/placeholder.svg"; // Fallback to placeholder
+    setIsLoading(false);
   };
 
   return (
@@ -59,6 +65,11 @@ const ProductImages = ({
         onMouseLeave={() => setIsZoomed(false)}
         onMouseMove={handleMouseMove}
       >
+        {isLoading && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="h-8 w-8 rounded-full border-2 border-primary border-t-transparent animate-spin"></div>
+          </div>
+        )}
         <img 
           src={selectedImage} 
           alt={name}
@@ -72,6 +83,7 @@ const ProductImages = ({
                 }
               : undefined
           }
+          onLoad={handleImageLoad}
           onError={handleImageError}
         />
       </div>

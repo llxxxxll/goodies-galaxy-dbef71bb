@@ -24,7 +24,18 @@ const ProductCard = ({ product }: ProductCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isWishlisted, setIsWishlisted] = useState(false);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
   const { addItem } = useCart();
+  
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
+  
+  const handleImageError = () => {
+    console.error("Product card image failed to load:", product.image);
+    setImageError(true);
+    setIsImageLoaded(true); // Still mark as loaded to remove spinner
+  };
   
   return (
     <div 
@@ -36,14 +47,15 @@ const ProductCard = ({ product }: ProductCardProps) => {
       <div className="relative aspect-square overflow-hidden rounded-lg bg-gray-100 mb-4">
         {/* Image */}
         <img 
-          src={product.image} 
+          src={imageError ? "/placeholder.svg" : product.image} 
           alt={product.name}
           className={cn(
             "h-full w-full object-cover object-center transition-all duration-500",
             isHovered ? "scale-105" : "scale-100",
             isImageLoaded ? "opacity-100" : "opacity-0"
           )}
-          onLoad={() => setIsImageLoaded(true)}
+          onLoad={handleImageLoad}
+          onError={handleImageError}
         />
         {!isImageLoaded && (
           <div className="absolute inset-0 flex items-center justify-center">
