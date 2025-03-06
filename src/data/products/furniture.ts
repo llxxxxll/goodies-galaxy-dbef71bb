@@ -52,5 +52,32 @@ export const furnitureProducts: Product[] = [
       "/lovable-uploads/cc815af8-4efd-4c31-a90b-35d3949a84ab.png",
       "/lovable-uploads/e99415d1-cb1e-4e3e-9e0d-fe2c6d490846.png"
     ]
+  },
+  {
+    id: 603,
+    name: "Minimal Dining Chair",
+    price: 119.99,
+    category: "Furniture",
+    image: "/lovable-uploads/df1340de-751d-43c1-8f69-e83a448fe99f.png",
+    rating: 4.7,
+    reviews: 35,
+    description: "Elevate your dining space with our Minimal Dining Chair. This simple yet sophisticated chair combines comfort and style, featuring clean lines and premium materials.",
+    details: [
+      "Dimensions: 45cm width x 45cm depth x 82cm height (seat height: 45cm)",
+      "Available with natural oak wood or white metal frame",
+      "Features a comfortable molded seat in wood or durable plastic",
+      "Comes in light natural brown, white, or light gray finishes",
+      "Resistant to scratches, moisture, and daily wear",
+      "Lightweight design (weighs only 4.2 kg) for easy movement",
+      "Simple assembly required",
+      "Stackable design for space-saving storage",
+      "Perfect for dining rooms, offices, or any social area"
+    ],
+    inStock: true,
+    additionalImages: [
+      "/lovable-uploads/ccf427c7-4fde-491c-a8b7-2e0268cfcf52.png",
+      "/lovable-uploads/1159fe50-b4fb-4d27-9a83-1fee2a62c7cd.png",
+      "/lovable-uploads/7db1d803-4b4f-4798-a786-ba5f9dba1eea.png"
+    ]
   }
 ];
