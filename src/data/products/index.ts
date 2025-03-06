@@ -7,6 +7,9 @@ import { homeDecorProducts } from "./homeDecor";
 import { storageProducts } from "./storage";
 import { furnitureProducts } from "./furniture";
 
+// Log products for debugging
+console.log("Furniture products:", furnitureProducts);
+
 // Combine all products
 export const productsData: Product[] = [
   ...lightingProducts,
@@ -16,6 +19,11 @@ export const productsData: Product[] = [
   ...storageProducts,
   ...furnitureProducts,
 ];
+
+// Log combined products for debugging
+console.log("All products count:", productsData.length);
+console.log("Furniture products count in combined data:", 
+  productsData.filter(p => p.category === "Furniture").length);
 
 // Featured products subset
 export const featuredProducts: Product[] = [

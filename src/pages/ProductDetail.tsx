@@ -34,9 +34,15 @@ const ProductDetail = () => {
       const foundProduct = productsData.find(p => p.id === productId);
       
       if (foundProduct) {
+        console.log("Found product:", foundProduct.id, foundProduct.name);
+        console.log("Product images:", foundProduct.image, foundProduct.additionalImages);
+        
         setProduct(foundProduct);
         setSelectedImage(foundProduct.image); // Set default image
         setRelatedProducts(getRelatedProducts(productId));
+      } else {
+        console.log("Product not found for ID:", productId);
+        console.log("Available products:", productsData.map(p => p.id));
       }
       setLoading(false);
     }, 500);
@@ -86,7 +92,7 @@ const ProductDetail = () => {
             {/* Product Images */}
             <ProductImages 
               image={product.image} 
-              additionalImages={product.additionalImages} 
+              additionalImages={product.additionalImages || []} 
               name={product.name}
               onImageSelect={(image) => setSelectedImage(image)}
               selectedImage={selectedImage}

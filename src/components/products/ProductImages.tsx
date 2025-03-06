@@ -44,6 +44,12 @@ const ProductImages = ({
     setPosition({ x, y });
   };
 
+  // Add error handling for images
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    console.error("Image failed to load:", e.currentTarget.src);
+    e.currentTarget.src = "/placeholder.svg"; // Fallback to placeholder
+  };
+
   return (
     <div>
       {/* Main Image with Zoom Effect */}
@@ -66,6 +72,7 @@ const ProductImages = ({
                 }
               : undefined
           }
+          onError={handleImageError}
         />
       </div>
       
@@ -79,6 +86,7 @@ const ProductImages = ({
             src={image} 
             alt={`${name} thumbnail 1`}
             className="h-full w-full object-cover object-center"
+            onError={handleImageError}
           />
         </button>
         
@@ -92,6 +100,7 @@ const ProductImages = ({
               src={imgSrc} 
               alt={`${name} thumbnail ${index + 2}`}
               className="h-full w-full object-cover object-center"
+              onError={handleImageError}
             />
           </button>
         ))}
