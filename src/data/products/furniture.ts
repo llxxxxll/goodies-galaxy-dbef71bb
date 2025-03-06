@@ -79,5 +79,32 @@ export const furnitureProducts: Product[] = [
       "/lovable-uploads/1159fe50-b4fb-4d27-9a83-1fee2a62c7cd.png",
       "/lovable-uploads/7db1d803-4b4f-4798-a786-ba5f9dba1eea.png"
     ]
+  },
+  {
+    id: 604,
+    name: "Minimal Bookshelf",
+    price: 159.99,
+    category: "Furniture",
+    image: "/lovable-uploads/56578cc2-fc0e-49d2-886f-818e62acd680.png",
+    rating: 4.8,
+    reviews: 32,
+    description: "Organize your space with our Minimal Bookshelf. This versatile and elegant shelf system combines clean lines with functional storage, perfect for displaying books, decorative items, and more.",
+    details: [
+      "Dimensions: 120cm height x 80cm width x 30cm depth",
+      "Made from high-quality natural oak or metal frame options",
+      "Features 3-4 open shelves for versatile storage and display",
+      "Available in light natural brown, white, or light gray finishes",
+      "Scratch and moisture-resistant surfaces",
+      "Sturdy construction that can hold up to 20kg per shelf",
+      "Simple assembly required with all hardware included",
+      "Perfect for living rooms, offices, bedrooms, or hallways",
+      "Lightweight yet stable design with adjustable feet for uneven floors"
+    ],
+    inStock: true,
+    additionalImages: [
+      "/lovable-uploads/55711f68-7ec2-4d73-8941-3100d4f2add6.png",
+      "/lovable-uploads/5d037737-a5e1-4b82-9a49-084f1b980afb.png",
+      "/lovable-uploads/242d319d-f4dc-4a91-a9db-598e6b9f8e5a.png"
+    ]
   }
 ];
